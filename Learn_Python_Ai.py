@@ -1,0 +1,58 @@
+revenue = 50
+expenses = 10
+print(type(revenue))
+
+profit = revenue - expenses
+print(profit)
+print(type(profit))
+
+margin = (profit/revenue)*100
+print(margin)
+print(type(margin))
+print(id(margin))
+
+expenses = "I'd love the food"
+print(type(expenses))
+
+expense_description = ''' There is a new car.
+It is blue in color.
+ '''
+
+len(expense_description)
+print(type(expense_description))
+
+
+#last 
+revenue = [50, 60, 70, 100]
+expenses = [20, 30, 50, 23]
+print(type(revenue))
+print(revenue[0])
+print(revenue[-1])
+print(revenue[1:3])
+print(len(revenue))
+
+
+for rev in revenue:
+    print("Revenues", rev)
+
+
+# Loop through all the indexes of the revenue list (0, 1, 2, 3, ...)
+# range(len(revenue)) generates the index numbers, and i stores one index at a time.
+for i in range(len(revenue)):  # Len(revenue) stores the length of the revenue string which is 4 
+    
+    # Print the current index.
+    print(i) 
+
+    # Access and print the revenue value at the current index.
+    # Here, i is NOT the value—it is only the index.
+    print(revenue[i])
+
+     # Calculate the profit for the current index by subtracting
+    # the expense at the same index from the revenue.
+    # The same index (i) is used to access both lists.
+    progit = revenue[i] - expenses[i]
+    margin = profit * 100 / revenue[i]
+    print(margin)
+
+    # Dictionary
+    
