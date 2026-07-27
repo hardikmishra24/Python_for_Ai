@@ -54,5 +54,18 @@ for i in range(len(revenue)):  # Len(revenue) stores the length of the revenue s
     margin = profit * 100 / revenue[i]
     print(margin)
 
-    # Dictionary
-    
+    # Dictionary - A dictionary in python stores data as key-value pairs
+    data = {"name":"Hardik", "age":19, "marks":{"maths":90, "science":97}}  
+    # Keys: name, age, marks
+    # Values: Hardik, 19, 90
+    print(data)
+   # Adding a new key 
+    data["city"] = "Jaipur"
+    print(data)
+   # Updating a value
+    data["age"] = 21
+   #Removing an Item
+del data["marks"]["science"]
+print(data)
+    #Get - get() safely looks for a key. If the key doesn't exist, it returns None instead of giving an error
+
