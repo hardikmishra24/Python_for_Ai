@@ -68,4 +68,22 @@ for i in range(len(revenue)):  # Len(revenue) stores the length of the revenue s
 del data["marks"]["science"]
 print(data)
     #Get - get() safely looks for a key. If the key doesn't exist, it returns None instead of giving an error
+    
+# looping in the dictionary
+for key in data:
+    print(key, data[key])   
 
+
+
+    # Tuples in python
+    # A tuple cannot be changed after it is created it is (immutable).
+    person = (10.5,"Hardik",True,50)
+    print(person)
+    print(person[2])
+    print(type(person))
+    print(len(person))
+    print(person.index(10.5))
+    # looping in number
+    for human in person:
+        print(human)
+    
