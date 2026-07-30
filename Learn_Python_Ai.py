@@ -47,7 +47,7 @@ for i in range(len(revenue)):  # Len(revenue) stores the length of the revenue s
     # Here, i is NOT the value—it is only the index.
     print(revenue[i])
 
-     # Calculate the profit for the current index by subtracting
+    # Calculate the profit for the current index by subtracting
     # the expense at the same index from the revenue.
     # The same index (i) is used to access both lists.
     progit = revenue[i] - expenses[i]
