@@ -13,7 +13,7 @@ def chat(user_message):
         "parts": [{"text": user_message}]
     })
 
-print(conversation)
+    print(conversation)
 
     client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
