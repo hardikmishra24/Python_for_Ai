@@ -4,18 +4,31 @@ import os
 
 load_dotenv()
 
-#Creating a list named as conversation which stores the chatbot memory
-coversation = [] 
+# Creating a list named conversation which stores the chatbot memory
+conversation = []
+
 def chat(user_message):
-    converation.append({"role": "user", "parts": [{"text": user_message}]})
+    conversation.append({
+        "role": "user",
+        "parts": [{"text": user_message}]
+    })
+
+    client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+
+    try:
+        interaction = client.models.generate_content(
+            model="gemini-3.5-flash",
+            contents=conversation
+        )
+
+        conversation.append({"role": "model", "parts": [{"text": interaction.text}]})
 
 
+        print(interaction.text)
 
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
-interaction = client.interactions.create(
-    model="gemini-3.6-flash",
-    input="HI my name is hardik remember it "
-)
 
-print(interaction.output_text)
+chat("Hi, my name is Hardik. Remember it.")
+chat("What's my name?")
